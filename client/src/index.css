@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0A0F0A;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  /* Apply Space Grotesk to all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  /* Custom scrollbar for activity log */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0F0A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(34, 197, 94, 0.2);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 197, 94, 0.4);
+  }
+}
+
+/* ==========================================================================
+   CUSTOM DESIGN SYSTEM VISUAL EFFECTS (Premium Agricultural Tech)
+   ========================================================================== */
+
+/* 1. OLED Bezel & Screen Inner Screen Glowing Layer */
+.oled-screen-glow {
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.15), inset 0 0 15px rgba(0, 255, 65, 0.1);
+  border: 1px solid rgba(0, 255, 65, 0.35);
+  background-color: #000000;
+}
+
+/* 2. OLED CRT Scanlines */
+.crt-scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  /* Horizontal scanline gradient and RGB phosphor shadow simulation */
+  background: 
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+  z-index: 20;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* 3. Blinking Terminal Cursor */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blinking-cursor::after {
+  content: '█';
+  color: #00FF41;
+  animation: cursorBlink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+/* 4. Pulse Dot Green (Connected) */
+@keyframes pulseGreen {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 4px rgba(34, 197, 94, 0);
+  }
+}
+
+.pulse-dot-green {
+  animation: pulseGreen 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 5. Pulse Dot Red (Camera Active Rec) */
+@keyframes pulseRed {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 0 10px 4px rgba(239, 68, 68, 0);
+  }
+}
+
+.pulse-dot-red {
+  animation: pulseRed 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 6. TV Static Noise Shader Effect */
+@keyframes staticNoiseTranslate {
+  0% { transform: translate(0, 0) }
+  10% { transform: translate(-3%, -5%) }
+  20% { transform: translate(-8%, 5%) }
+  30% { transform: translate(5%, -7%) }
+  40% { transform: translate(-5%, 10%) }
+  50% { transform: translate(-10%, 4%) }
+  60% { transform: translate(12%, -2%) }
+  70% { transform: translate(0, 8%) }
+  80% { transform: translate(-12%, 12%) }
+  90% { transform: translate(8%, 3%) }
+  100% { transform: translate(3%, -1%) }
+}
+
+.static-noise-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #0d0f0d;
+}
+
+.static-noise-bg::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* High resolution SVG noise embedded as a URL pattern */
+  background: transparent url('data:image/svg+xml,%3Csvg viewBox="0%200%20150%20150"%20xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter%20id="noiseFilter"%3E%3CfeTurbulence%20type="fractalNoise"%20baseFrequency="0.75"%20numOctaves="3"%20stitchTiles="stitch"/%3E%3C/filter%3E%3Crect%20width="100%25"%20height="100%25"%20filter="url(%23noiseFilter)"/%3E%3C/svg%3E') repeat;
+  opacity: 0.16;
+  animation: staticNoiseTranslate 0.3s steps(8) infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* 7. Premium Agricultural Border Glow Card Style */
+.ag-card-glow {
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.05);
+  background-color: #111811;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ag-card-glow:hover {
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.09);
+}
+
+/* 8. Text warning alert flashing text */
+@keyframes warningBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.warning-flash {
+  animation: warningBlink 1s ease-in-out infinite;
+}

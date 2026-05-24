@@ -1,0 +1,15 @@
+{
+  "name": "shasyabodh-root",
+  "version": "1.0.0",
+  "description": "Root orchestrator for Shasya Bodh (शस्य बोध) IoT Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm.cmd run server\" \"npm.cmd run client\"",
+    "client": "cd client && npm.cmd run dev",
+    "server": "cd server && npm.cmd run dev"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "private": true
+}

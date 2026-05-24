@@ -1,0 +1,16 @@
+{
+  "name": "shasyabodh-server",
+  "version": "1.0.0",
+  "description": "Express backend for Shasya Bodh (शस्य बोध) IoT Dashboard",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
