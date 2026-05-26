@@ -10,7 +10,7 @@ import { useSensorData } from './hooks/useSensorData';
 import { useESP32Status } from './hooks/useESP32Status';
 import { getInitialActivities, generateRandomActivity } from './utils/mockData';
 import { formatHHMMSS } from './utils/formatTime';
-import { Cpu, X, Wifi, AlertTriangle } from 'lucide-react';
+import { Cpu, X, Wifi, AlertTriangle, RefreshCw } from 'lucide-react';
 
 /**
  * Root Dashboard Component for Shasya Bodh (शस्य बोध).
@@ -67,10 +67,20 @@ export default function App() {
   }, [isConnected, ipAddress, addLogEntry]);
 
   // Handle Scan triggers initiated from the camera card
-  const handleCameraScanTrigger = () => {
-    setCameraScanSignal(true);
+  const handleCameraScanTrigger = (file) => {
+    setCameraScanSignal(file || true);
     addLogEntry("🌿", `Leaf scan sequence requested from Live Video frame capture.`, "INFO");
   };
+
+  // Log completed diagnosis scans to Activity Logs dynamically
+  const handleScanComplete = useCallback((result) => {
+    if (!result) return;
+    addLogEntry(
+      "🔬",
+      `Diagnosis complete: ${result.crop} - ${result.disease} (${result.confidence}% confidence). Severity: ${result.severity}.`,
+      result.severity === 'Severe' ? 'ALERT' : result.severity === 'Moderate' ? 'WARN' : 'INFO'
+    );
+  }, [addLogEntry]);
 
   // Submit new IP settings from modal
   const handleModalSubmit = async (e) => {
@@ -138,6 +148,7 @@ export default function App() {
             <DiseaseDetector 
               cameraScanTrigger={cameraScanSignal}
               onScanReset={() => setCameraScanSignal(false)}
+              onScanComplete={handleScanComplete}
             />
           </div>
 

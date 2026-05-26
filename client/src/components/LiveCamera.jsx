@@ -61,16 +61,29 @@ export default function LiveCamera({
     document.body.removeChild(link);
   };
 
-  // Scan current frame (sends preset mock leaf to detector)
-  const handleScanFrame = () => {
+  // Scan current frame (sends actual camera capture, falls back to mock if offline)
+  const handleScanFrame = async () => {
     if (!isConnected) return;
     
     // Shutter flash
     setShutterFlash(true);
     setTimeout(() => setShutterFlash(false), 200);
 
-    // Trigger parent scanner loader
-    onScanFrame();
+    try {
+      // Fetch the actual image from the camera proxy URL
+      const response = await fetch(`http://localhost:3001/api/camera-proxy?ip=${ipAddress}&t=${Date.now()}`);
+      if (response.ok) {
+        const blob = await response.blob();
+        const file = new File([blob], `camera_scan_${Date.now()}.jpg`, { type: 'image/jpeg' });
+        onScanFrame(file);
+      } else {
+        console.warn('[Shasya Bodh Camera] Proxy returned non-OK status, falling back to mock scan.');
+        onScanFrame();
+      }
+    } catch (err) {
+      console.warn('[Shasya Bodh Camera] Failed to capture real frame from camera proxy, falling back to mock scan.', err);
+      onScanFrame();
+    }
   };
 
   // Image source path - goes through backend proxy to avoid CORS

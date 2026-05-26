@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect x="5" y="5" width="90" height="90" rx="15" stroke="#22C55E" stroke-width="2" stroke-dasharray="6 4" opacity="0.3"/>
+  <circle cx="50" cy="50" r="40" stroke="#22C55E" stroke-width="1.5" opacity="0.1"/>
+  
+  <!-- Left Leaf -->
+  <path d="M50 80C30 70 25 45 50 25C50 25 52 40 50 80Z" fill="url(#leafGrad1)" stroke="#22C55E" stroke-width="1.5"/>
+  <!-- Right Leaf -->
+  <path d="M50 80C70 70 75 45 50 25C50 25 48 40 50 80Z" fill="url(#leafGrad2)" stroke="#16A34A" stroke-width="1.5"/>
+  
+  <!-- Tech Grid Overlay Nodes -->
+  <path d="M15 50H85" stroke="#00FF41" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M50 15V85" stroke="#00FF41" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3" opacity="0.4"/>
+  
+  <circle cx="50" cy="25" r="4" fill="#F59E0B" />
+  <circle cx="28" cy="50" r="3.5" fill="#22C55E" />
+  <circle cx="72" cy="50" r="3.5" fill="#22C55E" />
+  <circle cx="50" cy="80" r="3.5" fill="#00FF41" />
+  
+  <defs>
+    <linearGradient id="leafGrad1" x1="50" y1="25" x2="35" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#111811" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="50" y1="25" x2="65" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4ADE80" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#111811" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg>

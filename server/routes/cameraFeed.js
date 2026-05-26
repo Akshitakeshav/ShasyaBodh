@@ -1,7 +1,22 @@
 import express from 'express';
 import multer from 'multer';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { execFile } from 'child_process';
 
 const router = express.Router();
+
+// Define __dirname in ES module scope
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, '..');
+
+// Ensure temp directory exists for uploads
+const tempDir = path.join(projectRoot, 'temp');
+if (!fs.existsSync(tempDir)) {
+  fs.mkdirSync(tempDir, { recursive: true });
+}
 
 // Configure multer in-memory storage to keep disk clean
 const storage = multer.memoryStorage();
@@ -12,26 +27,48 @@ router.post('/analyse-image', upload.single('image'), (req, res) => {
   // Check if image file was uploaded
   if (!req.file) {
     console.log('[Shasya Bodh Backend] Analyse requested but no file uploaded.');
-  } else {
-    console.log(`[Shasya Bodh Backend] Analyzing uploaded leaf image: ${req.file.originalname} (${req.file.size} bytes)`);
+    return res.status(400).json({ error: 'No image file uploaded.' });
   }
 
-  // Return detailed diagnostic reports
-  res.json({
-    disease: "Early Blight",
-    confidence: 94.2,
-    crop: "Tomato",
-    severity: "Moderate",
-    treatment: [
-      "Apply Mancozeb 75% WP",
-      "Dose: 2g per litre of water",
-      "Spray in evening",
-      "Repeat after 7 days"
-    ],
-    alternatives: [
-      "Late Blight (12%)",
-      "Healthy (4%)"
-    ]
+  console.log(`[Shasya Bodh Backend] Analyzing uploaded leaf image: ${req.file.originalname} (${req.file.size} bytes)`);
+
+  const tempFilePath = path.join(tempDir, `${Date.now()}-${req.file.originalname}`);
+
+  // Write file buffer to temp folder
+  fs.writeFile(tempFilePath, req.file.buffer, (err) => {
+    if (err) {
+      console.error('[Shasya Bodh Backend] Failed to write temp file:', err);
+      return res.status(500).json({ error: 'Failed to save image file on server.' });
+    }
+
+    const pythonExe = path.join(projectRoot, 'venv', 'Scripts', 'python.exe');
+    const scriptPath = path.join(projectRoot, 'model', 'predict.py');
+
+    // Run prediction script
+    execFile(pythonExe, [scriptPath, tempFilePath], (execErr, stdout, stderr) => {
+      // Clean up the temp image file
+      fs.unlink(tempFilePath, (unlinkErr) => {
+        if (unlinkErr) {
+          console.error('[Shasya Bodh Backend] Failed to delete temp file:', unlinkErr);
+        }
+      });
+
+      if (execErr) {
+        console.error('[Shasya Bodh Backend] Model execution failed:', execErr);
+        console.error('Stderr:', stderr);
+        return res.status(500).json({ error: 'Inference script execution failed.', details: stderr });
+      }
+
+      try {
+        const result = JSON.parse(stdout);
+        console.log('[Shasya Bodh Backend] Inference result:', result.crop, '-', result.disease, `(${result.confidence}%)`);
+        return res.json(result);
+      } catch (parseErr) {
+        console.error('[Shasya Bodh Backend] Failed to parse script output:', parseErr);
+        console.error('Raw stdout:', stdout);
+        return res.status(500).json({ error: 'Failed to parse script prediction response.', details: stdout });
+      }
+    });
   });
 });
 
@@ -69,3 +106,4 @@ router.get('/camera-proxy', async (req, res) => {
 });
 
 export default router;
+
