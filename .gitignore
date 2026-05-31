@@ -1,2 +1,34 @@
-node_modules
-server/temp
+# Dependencies
+node_modules/
+server/venv/
+
+# Build outputs
+client/dist/
+
+# Temp & Cache
+server/temp/
+server/model/eval_deps/
+test_dataset/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Environment variables
+.env
+.env.local
+
+# IDE / Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*

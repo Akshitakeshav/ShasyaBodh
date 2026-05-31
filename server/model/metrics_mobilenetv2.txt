@@ -1,0 +1,31 @@
+Classification Metrics
+======================
+
+Total images: 47
+Correct predictions: 34
+Accuracy: 0.7234 (72.34%)
+Macro precision: 0.5333
+Macro F1-score: 0.4910
+Weighted precision: 0.8043
+Weighted F1-score: 0.7390
+
+Class                                                         Precision   F1-score    Support
+-----------------------------------------------------------------------------------------------
+Apple_scab                                                       0.7500     0.8571          3
+Apple_Cedar_apple_rust                                           1.0000     1.0000          4
+Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot                 1.0000     1.0000          4
+Corn_(maize)_Common_rust                                         0.6000     0.7500          3
+Corn_(maize)_healthy                                             1.0000     0.6667          4
+Grape_Black_rot                                                  0.2500     0.2857          3
+Grape_Leaf_blight_(Isariopsis_Leaf_Spot)                         0.0000     0.0000          3
+Grape_healthy                                                    1.0000     0.5000          3
+Potato_Early_blight                                              1.0000     0.8889          5
+Potato_Late_blight                                               0.0000     0.0000          0
+Potato_healthy                                                   1.0000     1.0000          2
+Strawberry_Leaf_scorch                                           0.0000     0.0000          0
+Tomato_Bacterial_spot                                            0.0000     0.0000          0
+Tomato_Early_blight                                              0.0000     0.0000          0
+Tomato_Spider_mites Two-spotted_spider_mite                      0.0000     0.0000          2
+Tomato_Target_Spot                                               0.0000     0.0000          0
+Tomato_Yellow_Leaf_Curl_Virus                                    1.0000     1.0000          6
+Tomato_healthy                                                   1.0000     0.8889          5

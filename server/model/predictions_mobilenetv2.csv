@@ -1,0 +1,48 @@
+image_path,actual_label,predicted_label,confidence
+D:\ShasyaBodh\test_dataset\Apple_Cedar_apple_rust\AppleCedarRust1.JPG,Apple_Cedar_apple_rust,Apple_Cedar_apple_rust,0.91477543
+D:\ShasyaBodh\test_dataset\Apple_Cedar_apple_rust\AppleCedarRust2.JPG,Apple_Cedar_apple_rust,Apple_Cedar_apple_rust,0.98928601
+D:\ShasyaBodh\test_dataset\Apple_Cedar_apple_rust\AppleCedarRust3.JPG,Apple_Cedar_apple_rust,Apple_Cedar_apple_rust,0.64693737
+D:\ShasyaBodh\test_dataset\Apple_Cedar_apple_rust\AppleCedarRust4.JPG,Apple_Cedar_apple_rust,Apple_Cedar_apple_rust,0.85373276
+D:\ShasyaBodh\test_dataset\Apple_scab\AppleScab1.JPG,Apple_scab,Apple_scab,0.29169193
+D:\ShasyaBodh\test_dataset\Apple_scab\AppleScab2.JPG,Apple_scab,Apple_scab,0.98740143
+D:\ShasyaBodh\test_dataset\Apple_scab\AppleScab3.JPG,Apple_scab,Apple_scab,0.87999678
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot\Corn_Cercospora_Grey_Leaf_Spot1.jpg,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,0.99933666
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot\Corn_Cercospora_Grey_Leaf_Spot2.jpg,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,0.83450538
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot\Corn_Cercospora_Grey_Leaf_Spot3(Real scenario).jpg,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,0.87783039
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot\Corn_Cercospora_Grey_Leaf_Spot4(Real scenario).jpg,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot,0.54444832
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Common_rust\CornCommonRust1.JPG,Corn_(maize)_Common_rust,Corn_(maize)_Common_rust,0.99937171
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Common_rust\CornCommonRust2.JPG,Corn_(maize)_Common_rust,Corn_(maize)_Common_rust,0.99421519
+D:\ShasyaBodh\test_dataset\Corn_(maize)_Common_rust\CornCommonRust3.JPG,Corn_(maize)_Common_rust,Corn_(maize)_Common_rust,0.99977404
+D:\ShasyaBodh\test_dataset\Corn_(maize)_healthy\Corn_Healthy3.jpg,Corn_(maize)_healthy,Corn_(maize)_healthy,0.40446889
+D:\ShasyaBodh\test_dataset\Corn_(maize)_healthy\Corn_Healthy_Plant_photo.jpg,Corn_(maize)_healthy,Strawberry_Leaf_scorch,0.70176232
+D:\ShasyaBodh\test_dataset\Corn_(maize)_healthy\Corn_Leaf_Health2(Real scenario).jpg,Corn_(maize)_healthy,Corn_(maize)_healthy,0.51954520
+D:\ShasyaBodh\test_dataset\Corn_(maize)_healthy\Corn_Leaf_Healthy1.jpg,Corn_(maize)_healthy,Corn_(maize)_Common_rust,0.35821688
+D:\ShasyaBodh\test_dataset\Grape_Black_rot\Grape_Black_Rot1.jpg,Grape_Black_rot,Corn_(maize)_Common_rust,0.52574933
+D:\ShasyaBodh\test_dataset\Grape_Black_rot\Grape_Black_Rot2.jpg,Grape_Black_rot,Strawberry_Leaf_scorch,0.74766535
+D:\ShasyaBodh\test_dataset\Grape_Black_rot\image3.jpg,Grape_Black_rot,Grape_Black_rot,0.85535258
+D:\ShasyaBodh\test_dataset\Grape_healthy\Grape_Leaf_Healthy1(Real scenario).jpg,Grape_healthy,Apple_scab,0.40369192
+D:\ShasyaBodh\test_dataset\Grape_healthy\Grape_Leaf_Healthy2.jpg,Grape_healthy,Grape_healthy,0.87336093
+D:\ShasyaBodh\test_dataset\Grape_healthy\Grape_Leaf_Healthy3(Real scenario).jpg,Grape_healthy,Grape_Black_rot,0.68002373
+D:\ShasyaBodh\test_dataset\Grape_Leaf_blight_(Isariopsis_Leaf_Spot)\Grape_Leaf_Blight1.jpg,Grape_Leaf_blight_(Isariopsis_Leaf_Spot),Tomato_Bacterial_spot,0.57119763
+D:\ShasyaBodh\test_dataset\Grape_Leaf_blight_(Isariopsis_Leaf_Spot)\Grape_Leaf_Blight2.jpg,Grape_Leaf_blight_(Isariopsis_Leaf_Spot),Tomato_Bacterial_spot,0.61110371
+D:\ShasyaBodh\test_dataset\Grape_Leaf_blight_(Isariopsis_Leaf_Spot)\Grape_Leaf_Blight3.jpg,Grape_Leaf_blight_(Isariopsis_Leaf_Spot),Grape_Black_rot,0.88617110
+D:\ShasyaBodh\test_dataset\Potato_Early_blight\PotatoEarlyBlight1.JPG,Potato_Early_blight,Potato_Early_blight,0.96233290
+D:\ShasyaBodh\test_dataset\Potato_Early_blight\PotatoEarlyBlight2.JPG,Potato_Early_blight,Potato_Early_blight,0.96471900
+D:\ShasyaBodh\test_dataset\Potato_Early_blight\PotatoEarlyBlight3.JPG,Potato_Early_blight,Potato_Late_blight,0.78506619
+D:\ShasyaBodh\test_dataset\Potato_Early_blight\PotatoEarlyBlight4.JPG,Potato_Early_blight,Potato_Early_blight,0.94332576
+D:\ShasyaBodh\test_dataset\Potato_Early_blight\PotatoEarlyBlight5.JPG,Potato_Early_blight,Potato_Early_blight,0.96859378
+D:\ShasyaBodh\test_dataset\Potato_healthy\PotatoHealthy1.JPG,Potato_healthy,Potato_healthy,0.98604763
+D:\ShasyaBodh\test_dataset\Potato_healthy\PotatoHealthy2.JPG,Potato_healthy,Potato_healthy,0.98087549
+D:\ShasyaBodh\test_dataset\Tomato_healthy\Tomato_Healthy( Real scenario)1.jpg,Tomato_healthy,Tomato_Target_Spot,0.34028107
+D:\ShasyaBodh\test_dataset\Tomato_healthy\TomatoHealthy1.JPG,Tomato_healthy,Tomato_healthy,0.89624190
+D:\ShasyaBodh\test_dataset\Tomato_healthy\TomatoHealthy2.JPG,Tomato_healthy,Tomato_healthy,0.97631776
+D:\ShasyaBodh\test_dataset\Tomato_healthy\TomatoHealthy3.JPG,Tomato_healthy,Tomato_healthy,0.89422113
+D:\ShasyaBodh\test_dataset\Tomato_healthy\TomatoHealthy4.JPG,Tomato_healthy,Tomato_healthy,0.87917942
+D:\ShasyaBodh\test_dataset\Tomato_Spider_mites Two-spotted_spider_mite\Tomato_Leaf_2Spotted_Spider_Mites1(Real scenario).jpg,Tomato_Spider_mites Two-spotted_spider_mite,Tomato_Early_blight,0.48137885
+D:\ShasyaBodh\test_dataset\Tomato_Spider_mites Two-spotted_spider_mite\Tomato_Leaf_2Spotted_Spider_Mites2(Real scenario).jpg,Tomato_Spider_mites Two-spotted_spider_mite,Grape_Black_rot,0.29880911
+D:\ShasyaBodh\test_dataset\Tomato_Yellow_Leaf_Curl_Virus\TomatoYellowCurlVirus1.JPG,Tomato_Yellow_Leaf_Curl_Virus,Tomato_Yellow_Leaf_Curl_Virus,0.91116285
+D:\ShasyaBodh\test_dataset\Tomato_Yellow_Leaf_Curl_Virus\TomatoYellowCurlVirus2.JPG,Tomato_Yellow_Leaf_Curl_Virus,Tomato_Yellow_Leaf_Curl_Virus,0.99882358
+D:\ShasyaBodh\test_dataset\Tomato_Yellow_Leaf_Curl_Virus\TomatoYellowCurlVirus3.JPG,Tomato_Yellow_Leaf_Curl_Virus,Tomato_Yellow_Leaf_Curl_Virus,0.98449177
+D:\ShasyaBodh\test_dataset\Tomato_Yellow_Leaf_Curl_Virus\TomatoYellowCurlVirus4.JPG,Tomato_Yellow_Leaf_Curl_Virus,Tomato_Yellow_Leaf_Curl_Virus,0.99142480
+D:\ShasyaBodh\test_dataset\Tomato_Yellow_Leaf_Curl_Virus\TomatoYellowCurlVirus5.JPG,Tomato_Yellow_Leaf_Curl_Virus,Tomato_Yellow_Leaf_Curl_Virus,0.99071491
+D:\ShasyaBodh\test_dataset\Tomato_Yellow_Leaf_Curl_Virus\TomatoYellowCurlVirus6.JPG,Tomato_Yellow_Leaf_Curl_Virus,Tomato_Yellow_Leaf_Curl_Virus,0.99970752

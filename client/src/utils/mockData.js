@@ -8,56 +8,56 @@ export const getInitialActivities = () => {
       id: "seed-1",
       timestamp: formatHHMMSS(now - 12000),
       icon: "🌿",
-      message: "Leaf scan completed. Target: TOMATO. Diagnosis: HEALTHY.",
+      message: { key: "log.seed_1" },
       badge: "INFO" // green
     },
     {
       id: "seed-2",
       timestamp: formatHHMMSS(now - 45000),
       icon: "⚠️",
-      message: "Soil Moisture levels dropped to 48% in Zone B. Irrigation highly recommended.",
+      message: { key: "log.seed_2" },
       badge: "WARN" // amber
     },
     {
       id: "seed-3",
       timestamp: formatHHMMSS(now - 180000),
       icon: "📷",
-      message: "ESP32-CAM stream initialized successfully. Current resolution 640x480.",
+      message: { key: "log.seed_3" },
       badge: "INFO" // green
     },
     {
       id: "seed-4",
       timestamp: formatHHMMSS(now - 300000),
       icon: "🌊",
-      message: "Water Level Threshold Check: 12 cm. Below 25 cm safety limit. Status: SAFE.",
+      message: { key: "log.seed_4" },
       badge: "INFO" // green
     },
     {
       id: "seed-5",
       timestamp: formatHHMMSS(now - 600000),
       icon: "⚠️",
-      message: "CRITICAL: Temperature spike detected (34.2°C). Activating misting systems.",
+      message: { key: "log.seed_5" },
       badge: "ALERT" // red
     },
     {
       id: "seed-6",
       timestamp: formatHHMMSS(now - 900000),
       icon: "🌿",
-      message: "Leaf Scan completed. Target: TOMATO. Diagnosis: LEAF BLIGHT (94% Conf).",
+      message: { key: "log.seed_6" },
       badge: "WARN" // amber
     },
     {
       id: "seed-7",
       timestamp: formatHHMMSS(now - 1200000),
       icon: "🌊",
-      message: "Precipitation forecasting updated. Moderate rain expected in 3 hours.",
+      message: { key: "log.seed_7" },
       badge: "INFO" // green
     },
     {
       id: "seed-8",
       timestamp: formatHHMMSS(now - 1500000),
       icon: "🌿",
-      message: "IoT base telemetry station Shasya Bodh online. System initialized.",
+      message: { key: "log.seed_8" },
       badge: "INFO" // green
     }
   ];
@@ -67,52 +67,52 @@ export const getInitialActivities = () => {
 const randomEvents = [
   {
     icon: "🌿",
-    message: "Leaf scanning completed. Crop: CABBAGE. Diagnosis: BLACK ROT. Action: Spray Fungicide.",
+    message: { key: "log.rand_1" },
     badge: "WARN"
   },
   {
     icon: "🌊",
-    message: "Flood level check. Level: 14.2 cm. Threshold: 25.0 cm. Status: SAFE.",
+    message: { key: "log.rand_2" },
     badge: "INFO"
   },
   {
     icon: "⚠️",
-    message: "ESP32 telemetry warns: Battery charge at 15%. Switching to solar conservation mode.",
+    message: { key: "log.rand_3" },
     badge: "WARN"
   },
   {
     icon: "🌿",
-    message: "AI leaf inference processed. Crop: POTATO. Diagnosis: LATE BLIGHT. Action: Apply Mancozeb.",
+    message: { key: "log.rand_4" },
     badge: "ALERT"
   },
   {
     icon: "📷",
-    message: "ESP32-CAM successfully refreshed MJPEG buffer. Connected signal: Strong.",
+    message: { key: "log.rand_5" },
     badge: "INFO"
   },
   {
     icon: "⚠️",
-    message: "Soil pH levels shifted: 6.4 -> 6.1 (Slightly Acidic). Monitor calcium feeds.",
+    message: { key: "log.rand_6" },
     badge: "INFO"
   },
   {
     icon: "🌊",
-    message: "CRITICAL ALERT: Flood detection level reached 21.4 cm! Exceeding warning boundary.",
+    message: { key: "log.rand_7" },
     badge: "ALERT"
   },
   {
     icon: "🌿",
-    message: "Automated scan finished. Target: EGGPLANT. Diagnosis: HEALTHY (98.6% Conf).",
+    message: { key: "log.rand_8" },
     badge: "INFO"
   },
   {
     icon: "⚠️",
-    message: "Moisture sensor recalibrated in Sector 4. Level adjusted to 68.2%.",
+    message: { key: "log.rand_9" },
     badge: "INFO"
   },
   {
     icon: "🌿",
-    message: "Leaf scan completed. Target: TOMATO. Diagnosis: EARLY BLIGHT (94.2% Conf).",
+    message: { key: "log.rand_10" },
     badge: "WARN"
   }
 ];

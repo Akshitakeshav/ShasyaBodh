@@ -13,11 +13,14 @@ export default {
         agAmber: "#F59E0B",
         agOled: "#00FF41",
         agRed: "#EF4444",
+        earth: '#584c33',
+        straw: '#f5e7b8',
         agMuted: "#4B5563"
       },
       fontFamily: {
         sans: ["'Space Grotesk'", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"]
+        mono: ["'JetBrains Mono'", "monospace"],
+        serifDisplay: ["'DM Serif Display'", "serif"]
       },
       boxShadow: {
         agCard: "0 0 20px rgba(34, 197, 94, 0.05)",
